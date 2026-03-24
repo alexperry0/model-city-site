@@ -1,0 +1,99 @@
+/* ── Layout — Apple-style full-viewport storytelling ── */
+
+.page {
+  flex: 1;
+  padding-top: var(--nav-height);
+}
+
+.scene {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem var(--page-pad);
+  text-align: center;
+  position: relative;
+}
+
+.scene--narrow {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  text-align: left;
+  min-height: auto;
+  padding: 5rem var(--page-pad);
+}
+
+.scene--alt {
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 26, 46, 0.03) 30%, rgba(15, 26, 46, 0.03) 70%, transparent 100%);
+}
+
+.scene__inner {
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+.scene__inner--wide {
+  max-width: var(--content-wide);
+  width: 100%;
+}
+
+.scene__rule {
+  width: 60px;
+  height: 1px;
+  background: var(--border-strong);
+  margin: 0 auto 2rem;
+}
+
+/* ── Hero ── */
+
+.hero {
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem var(--page-pad);
+  position: relative;
+  background: radial-gradient(ellipse 60% 40% at 50% 45%, rgba(199, 149, 26, 0.06) 0%, transparent 70%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--svg-constellation);
+  background-size: 400px 400px;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 75%);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero-tagline {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.8vw, 1.65rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  max-width: 580px;
+}
+
+.hero-details {
+  font-size: 0.9rem;
+  color: rgba(15, 26, 46, 0.45);
+  margin-bottom: 3rem;
+  letter-spacing: 0.03em;
+}

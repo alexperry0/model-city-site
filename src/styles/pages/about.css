@@ -1,0 +1,75 @@
+/* ── Progressive Scroll — sticky diagram + scrolling text ── */
+
+.progressive-section {
+  display: flex;
+  gap: 3rem;
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+  position: relative;
+}
+
+.progressive-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.progressive-diagram-col {
+  flex: 1 1 55%;
+  min-height: 100%;
+}
+
+.progressive-diagram-sticky {
+  position: sticky;
+  top: var(--nav-height);
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressive-text-col {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.progressive-step {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.progressive-step h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.progressive-step p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .progressive-section {
+    flex-direction: column;
+  }
+
+  .progressive-diagram-col {
+    order: -1;
+  }
+
+  .progressive-diagram-sticky {
+    position: relative;
+    top: 0;
+    height: auto;
+  }
+
+  .progressive-step {
+    min-height: 50vh;
+  }
+}
