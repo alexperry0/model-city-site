@@ -28,7 +28,6 @@ export default function About() {
       {/* Our Story */}
       <section className="scene scene--narrow reveal-fade-up reveal-stagger" ref={storyRef}>
         <div className="scene__inner">
-          <span className="label">Our Story</span>
           <h2>Why Kingsport</h2>
           <p>
             Model City Church is a new church plant in Kingsport, Tennessee — a city with a rich
@@ -58,7 +57,6 @@ export default function About() {
       {/* Our Beliefs */}
       <section className="scene scene--narrow reveal-fade-up reveal-stagger" ref={believeRef}>
         <div className="scene__inner">
-          <span className="label">Belief</span>
           <h2>Our Beliefs</h2>
           <p>
             Model City Church is a nondenominational church that stands in the Wesleyan tradition.
