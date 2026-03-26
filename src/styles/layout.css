@@ -6,12 +6,12 @@
 }
 
 .scene {
-  min-height: 70vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6rem var(--page-pad);
+  padding: clamp(3rem, 8vw, 6rem) var(--page-pad);
   text-align: center;
   position: relative;
 }
@@ -48,13 +48,13 @@
 /* ── Hero ── */
 
 .hero {
-  min-height: calc(100vh - var(--nav-height));
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem var(--page-pad);
+  padding: clamp(4rem, 10vw, 8rem) var(--page-pad) clamp(3rem, 8vw, 6rem);
   position: relative;
   background: radial-gradient(ellipse 60% 40% at 50% 45%, rgba(199, 149, 26, 0.06) 0%, transparent 70%);
 }
